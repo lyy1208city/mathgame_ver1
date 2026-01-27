@@ -1,0 +1,172 @@
+<!-- Updated index.html (replace your current index.html with this) -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 600px; 
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        button, input[type="file"] { 
+            display: block;
+            margin: 15px auto;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+            width: auto;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        input[type="file"] {
+            background: transparent;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input[type="file"]::file-selector-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button[onclick="downloadExample()"] {
+            background: #2196F3;
+        }
+        button[onclick="downloadExample()"]:hover {
+            background: #1e88e5;
+        }
+        button[onclick="clearLocalJson()"] {
+            background: #f44336;
+        }
+        button[onclick="clearLocalJson()"]:hover {
+            background: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>主頁</h1>
+        <button onclick="goToMathGame()">前往遊戲頁面</button>
+
+    </div>
+
+    <script>
+        function goToMathGame() {
+            window.location.href = 'mathGame.html';
+            localStorage.removeItem('mathProblems');
+        const jsonData = [
+        {
+        "firstNumber": "2",
+        "operation": "+",
+        "lastNumber": "2"
+        },
+        {
+        "firstNumber": "10",
+        "operation": "-",
+        "lastNumber": "4"
+        },
+        {
+        "firstNumber": "5",
+        "operation": "-",
+        "lastNumber": "1"
+        },
+        {
+        "firstNumber": "3",
+        "operation": "+",
+        "lastNumber": "4"
+        },
+        {
+        "firstNumber": "8",
+        "operation": "-",
+        "lastNumber": "3"
+        },
+        {
+        "firstNumber": "1",
+        "operation": "+",
+        "lastNumber": "5"
+        },
+        {
+        "firstNumber": "12",
+        "operation": "-",
+        "lastNumber": "6"
+        },
+        {
+        "firstNumber": "7",
+        "operation": "+",
+        "lastNumber": "8"
+        },
+        {
+        "firstNumber": "9",
+        "operation": "-",
+        "lastNumber": "2"
+        },
+        {
+        "firstNumber": "4",
+        "operation": "+",
+        "lastNumber": "9"
+        },
+        {
+        "firstNumber": "15",
+        "operation": "-",
+        "lastNumber": "5"
+        },
+        {
+        "firstNumber": "6",
+        "operation": "+",
+        "lastNumber": "7"
+        },
+        {
+        "firstNumber": "11",
+        "operation": "-",
+        "lastNumber": "4"
+        },
+        {
+        "firstNumber": "14",
+        "operation": "+",
+        "lastNumber": "1"
+        },
+        {
+        "firstNumber": "13",
+        "operation": "-",
+        "lastNumber": "7"
+        }
+        ];
+            localStorage.setItem('mathProblems', JSON.stringify(jsonData));
+        }
+    </script>
+</body>
+</html>
