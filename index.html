@@ -80,91 +80,112 @@
 <body>
     <div class="container">
         <h1>主頁</h1>
-        <button onclick="goToMathGame()">前往遊戲頁面</button>
+        <button onclick="goToMathGameMc1()">前往遊戲頁面 (一選一Mc)</button>
+        <button onclick="goToMathGameMc2()">前往遊戲頁面 (二選一Mc)</button>
+        <button onclick="goToMathGameMc3()">前往遊戲頁面 (三選一Mc)</button>
+        <button onclick="goToMathGameOpenEnd()">前往遊戲頁面 (開放式題目)</button>
 
     </div>
 
     <script>
-        function goToMathGame() {
-            window.location.href = 'mathGame.html';
-            localStorage.removeItem('mathProblems');
         const jsonData = [
-        {
-        "firstNumber": "2",
-        "operation": "+",
-        "lastNumber": "2"
-        },
-        {
-        "firstNumber": "10",
-        "operation": "-",
-        "lastNumber": "4"
-        },
-        {
-        "firstNumber": "5",
-        "operation": "-",
-        "lastNumber": "1"
-        },
-        {
-        "firstNumber": "3",
-        "operation": "+",
-        "lastNumber": "4"
-        },
-        {
-        "firstNumber": "8",
-        "operation": "-",
-        "lastNumber": "3"
-        },
-        {
-        "firstNumber": "1",
-        "operation": "+",
-        "lastNumber": "5"
-        },
-        {
-        "firstNumber": "12",
-        "operation": "-",
-        "lastNumber": "6"
-        },
-        {
-        "firstNumber": "7",
-        "operation": "+",
-        "lastNumber": "8"
-        },
-        {
-        "firstNumber": "9",
-        "operation": "-",
-        "lastNumber": "2"
-        },
-        {
-        "firstNumber": "4",
-        "operation": "+",
-        "lastNumber": "9"
-        },
-        {
-        "firstNumber": "15",
-        "operation": "-",
-        "lastNumber": "5"
-        },
-        {
-        "firstNumber": "6",
-        "operation": "+",
-        "lastNumber": "7"
-        },
-        {
-        "firstNumber": "11",
-        "operation": "-",
-        "lastNumber": "4"
-        },
-        {
-        "firstNumber": "14",
-        "operation": "+",
-        "lastNumber": "1"
-        },
-        {
-        "firstNumber": "13",
-        "operation": "-",
-        "lastNumber": "7"
+            {
+            "firstNumber": "2",
+            "operation": "+",
+            "lastNumber": "2"
+            },
+            {
+            "firstNumber": "10",
+            "operation": "-",
+            "lastNumber": "4"
+            },
+            {
+            "firstNumber": "5",
+            "operation": "-",
+            "lastNumber": "1"
+            },
+            {
+            "firstNumber": "3",
+            "operation": "+",
+            "lastNumber": "4"
+            },
+            {
+            "firstNumber": "8",
+            "operation": "-",
+            "lastNumber": "3"
+            },
+            {
+            "firstNumber": "1",
+            "operation": "+",
+            "lastNumber": "5"
+            },
+            {
+            "firstNumber": "12",
+            "operation": "-",
+            "lastNumber": "6"
+            },
+            {
+            "firstNumber": "7",
+            "operation": "+",
+            "lastNumber": "8"
+            },
+            {
+            "firstNumber": "9",
+            "operation": "-",
+            "lastNumber": "2"
+            },
+            {
+            "firstNumber": "4",
+            "operation": "+",
+            "lastNumber": "9"
+            },
+            {
+            "firstNumber": "15",
+            "operation": "-",
+            "lastNumber": "5"
+            },
+            {
+            "firstNumber": "6",
+            "operation": "+",
+            "lastNumber": "7"
+            },
+            {
+            "firstNumber": "11",
+            "operation": "-",
+            "lastNumber": "4"
+            },
+            {
+            "firstNumber": "14",
+            "operation": "+",
+            "lastNumber": "1"
+            },
+            {
+            "firstNumber": "13",
+            "operation": "-",
+            "lastNumber": "7"
+            }
+            ];
+        function goToMathGameMc1() {
+            window.location.href = 'mathGame_mc_1.html';
+            localStorage.removeItem('mathProblems');
+            localStorage.setItem('mathProblems', JSON.stringify(jsonData));
         }
-        ];
+
+        function goToMathGameMc2(){
+            window.location.href = 'mathGame_mc_2.html';
+            localStorage.removeItem('mathProblems');
+            localStorage.setItem('mathProblems', JSON.stringify(jsonData));
+        }
+
+        function goToMathGameMc3(){
+            window.location.href = 'mathGame_mc_3.html';
+            localStorage.removeItem('mathProblems');
+            localStorage.setItem('mathProblems', JSON.stringify(jsonData));
+        }
+
+        function goToMathGameOpenEnd() {
+            window.location.href = 'mathGame_openend.html';
+            localStorage.removeItem('mathProblems');
             localStorage.setItem('mathProblems', JSON.stringify(jsonData));
         }
     </script>
